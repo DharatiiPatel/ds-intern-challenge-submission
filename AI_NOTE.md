@@ -1,32 +1,32 @@
-# AI Collaboration Note
+AI Collaboration Note
 
-## Did You Use AI?
+Did You Use AI?
 
-Yes. I used Cursor with Claude and Codex to help write the script and the short write-up. I read the challenge files and looked at the CSV myself first.
+Yes. I used Cursor with Claude and Codex.
 
-## How You Used It
+How You Used It
 
-I used AI to help turn my notes into a working script and clearer wording. I did not let AI pick the final recommendation alone.
+I read the challenge files and the domain packet, then opened the CSV and just scrolled through it. The notes column made the big issues obvious, so I already knew what looked trustworthy and what did not. 
 
-I compared drafts from Claude and Codex. Claude’s version ranked the workflows and kept some noisy rows in the totals, so Lead summary looked better than it should. Codex’s version stayed closer to a weekly health brief: what is working, what looks suspicious, and what to look at next. That matched the teammate ask better so I used the Codex direction and then simplified the code myself.
+After that, I used AI to help me turn those notes into a small script and cleaner wording. 
 
-## One Prompt, Workflow, Or Moment That Helped
+I also compared Claude and Codex while drafting. Claude pushed more toward ranking workflows and left some noisy rows in the totals, which made Lead summary look too good. Codex stayed closer to a short weekly brief for a teammate. That comparison was useful but I still made some changes so it matched the assumptions I cared about like dropping the demo rows and keeping Aug 7.
 
-Asking for one small use case i.e a weekly health brief instead of a dashboard or a model. Comparing Claude and Codex side by side also helped me see which output was more useful and which one overbuilt or trusted the data too much.
+One Prompt, Workflow, Or Moment That Helped
 
-## One Thing You Verified Or Decided Yourself
+The most useful moment was asking AI to code around the rules I already wrote in my README: use accepted/completed, drop the Aug 5 demo/duplicate rows, and keep Aug 7 visible. When a draft tried to “clean away” the policy-change day, I stopped it. That row is the main warning, so it had to stay in the brief.
 
-I checked the main numbers myself from the CSV:
+One Thing You Verified Or Decided Yourself
 
-- 41 rows total
-- drop both Aug 5 Lead summary email demo/duplicate rows from the totals
-- Lead summary / email accept rate is about 81%
-- Aug 7 Reply draft queue: rating 2.1, confidence 0.91, flag rate about 71%
+I checked the main numbers myself from the CSV instead of trusting the scripts:
+41 rows total
+Drop both Aug 5 Lead summary email demo/duplicate rows from the totals
+Lead summary/email accept rate is about 81%
+Aug 7 Reply draft queue: rating 2.1, confidence 0.91, flag rate about 71%
 
-I decided myself to:
+I also made a few calls myself:
+Drop demo and duplicate rows from the health totals
+Keep the Aug 7 policy-change row visible
+Treat median_confidence as the least trustworthy metric
 
-1. drop demo and duplicate rows from health totals
-2. keep the Aug 7 policy-change row visible
-3. treat `median_confidence` as the least trustworthy metric
-
-AI helped me write faster. Those judgment calls were mine. The final script I am submitting is the Codex-based version, cleaned up.
+AI made writing faster. The final judgment was mine. The script I am submitting is the Codex-based version after I simplified it.
