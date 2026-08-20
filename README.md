@@ -12,11 +12,11 @@ How to run:
 
 1. Open the folder that contains health_check.py and the sample-data folder.
 2. Run: python3 health_check.py
-3. Check the output folder for health_check_output.txt and workflow_rates.svg
 
+Note: I have attached an output folder with the script output as text and a simple bar chart for accept vs flag rate.
 ## **Who It Is For**
 
-A SignalDesk product teammate who wants to know if these AI workflows are ready to expand. This document will help them to get a clear picture on what should be the next step like.
+A SignalDesk product teammate who wants to know if these AI workflows are ready to expand. This document will help them to get a clear picture of what the next step should be.
 
 ## **Data Or Source Used**
 
@@ -39,7 +39,7 @@ The export is small and messy, so I could not trust every column the same way. B
 - Aug 5 Lead summary email looks like a demo spike, then a duplicate.
 - Team name casing differs (product vs Product).
 - Confidence shows up as n/a text in one row.
-- One missing user rating.
+- One user rating is missing.
 - Aug 7 is missing two source slices.
 - Feedback clustering has a small sample.
 - Aug 7 Support review policy change makes that day hard to compare with other days.
