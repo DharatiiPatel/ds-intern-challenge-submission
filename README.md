@@ -6,30 +6,31 @@ Track A: Fictional Domain Packet (SignalDesk).
 
 ## What I Built
 
-A simple Python script called health_check.py.
+A Python script called health_check.py. It prints a short weekly health brief. It cleans the messy export, drops bad rows from the totals, and tells a teammate what is working, what looks odd and what to check next. 
 
 How to run:
 
 1. Open the folder that contains health_check.py and the sample-data folder.
 2. Run: python3 health_check.py
+3. Check the output folder for health_check_output.txt and workflow_rates.svg
 
-Needs Python 3 only. No extra packages. It prints a short weekly health brief. It cleans the messy export, drops bad rows from the totals, and tells a teammate what is working, what looks odd, and what to check next.
+## **Who It Is For**
 
-## Who It Is For
+A SignalDesk product teammate who wants to know if these AI workflows are ready to expand. This document will help them to get a clear picture on what should be the next step like.
 
-A SignalDesk product teammate who wants to know if these AI workflows are ready to expand. They need a clear next step, not a big dashboard.
+## **Data Or Source Used**
 
-## Data Or Source Used
-
-The fictional CSV in sample-data/product_usage_events.csv (Aug 1-7, 2026), plus the notes in domain-packet.md.
+The fictional CSV in sample-data/product_usage_events.csv (Aug 1-7, 2026).
 
 ## Assumptions I Made
 
-- accepted/completed is the best "was this useful?" signal in this file.
-- Demo traffic and the duplicate row should not be in the health totals.
-- The Aug 7 Support policy-change row should stay visible, not get hidden.
-- Do not average all workflows together.
-- Model confidence is not the same as quality.
+The export is small and messy, so I could not trust every column the same way. Before writing the script I chose a few rules for what to trust and what to treat carefully:
+
+- I used accepted/completed as my main useful signal because finished just means the run ended and accepted means someone actually took the output with little rework.
+- I left the demo traffic and the duplicate row out of the totals. If I kept the Aug 5 Lead summary email spike, that workflow would look way better than it really did on normal days.
+- I kept the Aug 7 Support policy-change row in the brief. That is the day ratings fall and flags spike, so hiding it was wrong.
+- I did not average all workflows into one score because Sales, Support, and Product are doing different jobs and blending them would hide what is actually working.
+- I did not treat model confidence as quality because it is just the model scoring itself and on Aug 7 confidence was high while the user rating was low.
 
 
 

@@ -1,0 +1,43 @@
+SIGNALDESK WEEKLY HEALTH CHECK
+2026-08-01 to 2026-08-07  |  41 rows, 2 dropped from totals
+========================================================================
+
+RECOMMENDATION
+  Do not roll out more broadly yet.
+  Investigate the 7 Aug Support review-policy change first.
+  Lead summary (email) is the strongest clean signal so far.
+  Do not use the 5 Aug Sales email demo rows or median_confidence
+  as primary success metrics.
+
+WHAT IS WORKING
+  Lead summary / email — accept 81%, flag 9%, rating 4.22.
+  After the 4 Aug prompt start (demo rows excluded): Lead summary accept 77% → 79%. Descriptive only, not proof of impact.
+
+WHAT LOOKS SUSPICIOUS
+  • 5 Aug Lead summary email: demo spike (140 sessions) + duplicate row.
+  • 7 Aug Reply draft queue: rating 2.1, confidence 0.91, flag 71% — review policy changed mid-day.
+  • Feedback clustering: highest estimated minutes (13.0) but weakest accept (66%) on lower volume.
+
+METRIC TO TRUST LEAST
+  median_confidence — model self-report, not human quality.
+  On 7 Aug it was high while the user rating crashed.
+
+LOOK AT NEXT
+  1. What exactly changed in Support review policy on 7 Aug?
+  2. Filter demo/test accounts out of exports.
+  3. Weekly: accept rate + user rating by workflow + source (never blended).
+
+DATA QUALITY FLAGS
+  2026-08-01  Support/Reply draft/manual  [missing user rating]
+  2026-08-02  Product/Feedback clustering/manual  [team label casing differs]
+  2026-08-05  Sales/Lead summary/email  [demo-account traffic spike]
+  2026-08-05  Sales/Lead summary/email  [duplicate export row]
+  2026-08-05  Product/Feedback clustering/manual  [confidence stored as text n/a]
+  2026-08-07  Support/Reply draft/queue  [review policy changed mid-day]  ← kept visible, not dropped
+
+WORKFLOW HEALTH (demo + duplicate excluded)
+  Rates: completion = completed/sessions; accept and flag = count/completed.
+  Lead summary           sessions 450  complete 78%  accept 78%  flag 10%  min  8.0  rating 4.14
+  Reply draft            sessions 510  complete 81%  accept 76%  flag 17%  min  3.9  rating 3.98
+  Feedback clustering    sessions 207  complete 67%  accept 66%  flag 19%  min 13.0  rating 3.72
+
