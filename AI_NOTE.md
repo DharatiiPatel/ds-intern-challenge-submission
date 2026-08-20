@@ -2,15 +2,15 @@
 
 ## Did You Use AI?
 
-Yes. I used Cursor with Claude and Codex.
+Yes. I used Cursor, Claude and Codex.
 
 ## How You Used It
 
-I read the challenge files and the domain packet, then opened the CSV and just scrolled through it. The notes column made the big issues obvious, so I already knew what looked trustworthy and what did not. 
+I read the challenge files and the domain packet, then opened the CSV and just scrolled through it. I looked through all the columns and investigated the data so I already knew what looked trustworthy and what did not. 
 
 After that, I used AI to help me turn those notes into a small script and cleaner wording. 
 
-I also compared Claude and Codex while drafting. Claude pushed more toward ranking workflows and left some noisy rows in the totals, which made Lead summary look too good. Codex stayed closer to a short weekly brief for a teammate. That comparison was useful  but I still made some changes so it matched the assumptions I cared about like dropping the demo rows and keeping Aug 7.
+I also compared Claude and Codex while drafting. Claude pushed more toward ranking workflows and left some noisy rows in the totals, which made Lead summary look too good. Codex stayed closer to a short weekly brief for a teammate. That comparison was useful but I still made some changes so it matched the assumptions I cared about like dropping the demo rows and keeping Aug 7.
 
 ## **One Prompt, Workflow, Or Moment That Helped**
 
@@ -22,7 +22,7 @@ I checked the main numbers myself from the CSV instead of trusting the scripts:
 
 - 41 rows total
 - drop both Aug 5 Lead summary email demo/duplicate rows from the totals
-- Lead summary / email accept rate is about 81%
+- Lead summary/email accept rate is about 81%
 - Aug 7 Reply draft queue: rating 2.1, confidence 0.91, flag rate about 71%
 
 I also made a few calls myself:
